@@ -1,3 +1,5 @@
+package com.github.meandor.orion
+
 import org.apache.spark.sql.SparkSession
 
 object Orion {
@@ -6,10 +8,8 @@ object Orion {
 
   def main(args: Array[String]): Unit = {
     val trainDataset = spark.read.format("csv")
-      .option("sep", ",")
-      .option("inferSchema", "true")
       .option("header", "true")
-      .load("grocery/train.csv")
+      .load("hdfs://ip-172-31-38-13.eu-central-1.compute.internal:8020/grocery/train.csv")
 
     trainDataset.show()
   }
