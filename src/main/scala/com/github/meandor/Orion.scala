@@ -13,7 +13,7 @@ object Orion extends LazyLogging {
     logger.info("Done reading dataset")
 
     logger.info("Writing transformed dataset")
-    val nextGeneration = HDFSHelper.nextGeneration(HDFSHelper.defaultHDFS(), "/dataset")
+    val nextGeneration = HDFSHelper.nextGeneration(HDFSHelper.defaultHDFS(), "/grocery/dataset")
     trainDataset.write.parquet(s"${HDFSHelper.basePath}/grocery/dataset/$nextGeneration/train.parquet")
   }
 }
