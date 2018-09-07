@@ -15,7 +15,7 @@ jobs:
 
     - restore_cache:
         keys:
-        - v1-dependencies-{{ checksum "build.gradlew" }}
+        - v1-dependencies-{{ checksum "build.gradle" }}
         - v1-dependencies-
 
     - run: cat /dev/null | ./gradlew assemble
