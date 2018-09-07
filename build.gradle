@@ -8,7 +8,7 @@ def scalaVersion = "2.11"
 
 group = "com.github.meandor"
 version = "0.1.0"
-mainClassName = 'com.github.meandor.orion.Orion'
+mainClassName = 'com.github.meandor.Orion'
 
 dependencies {
     compile('org.scala-lang:scala-library:2.11.12')
