@@ -2,6 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/meandor/orion.svg?style=svg)](https://circleci.com/gh/meandor/orion)
 
+> We face the Doomsday Machine!
+>
+> -- Orion (New Genesis)
+
 Spark job transforming data from [favorita-grocery-sales-forecasting](https://www.kaggle.com/c/favorita-grocery-sales-forecasting).
 
 The transformed dataset is saved in `/grocery/dataset/<GENERATION-NUMBER>/train.parquet` on the HDFS.
