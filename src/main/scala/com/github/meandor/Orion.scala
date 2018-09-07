@@ -11,6 +11,6 @@ object Orion extends LazyLogging {
     val trainDataset = Features.loadDataset(spark, "hdfs://ip-172-31-38-13.eu-central-1.compute.internal:8020/grocery/train.csv")
 
     logger.info("Writing transformed dataset")
-    trainDataset.write.csv("hdfs://ip-172-31-38-13.eu-central-1.compute.internal:8020/grocery/train-transformed.csv")
+    trainDataset.write.parquet("hdfs://ip-172-31-38-13.eu-central-1.compute.internal:8020/grocery/train.parquet")
   }
 }
