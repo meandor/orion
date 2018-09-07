@@ -2,4 +2,12 @@
 
 [![CircleCI](https://circleci.com/gh/meandor/orion.svg?style=svg)](https://circleci.com/gh/meandor/orion)
 
-Spark stuff
+## Test
+```bash
+./gradlew check
+```
+
+## Build jar
+```bash
+./gradlew shadowJar
+```
