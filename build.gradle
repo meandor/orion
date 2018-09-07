@@ -7,20 +7,18 @@ plugins {
 def scalaVersion = "2.11"
 
 group = "com.github.meandor"
-version = "0.1.1"
+version = "0.1.2-SNAPTSHOT"
 mainClassName = 'com.github.meandor.Orion'
 
 dependencies {
     compile('org.scala-lang:scala-library:2.11.12')
-    compile("org.apache.spark:spark-mllib_$scalaVersion:2.3.1")
+    compile("org.apache.spark:spark-mllib_$scalaVersion:2.3.1") {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
     compile('ch.qos.logback:logback-classic:1.2.3')
     compile("com.typesafe.scala-logging:scala-logging_$scalaVersion:3.9.0")
 
     testCompile("org.scalatest:scalatest_$scalaVersion:3.0.4")
-}
-
-configurations.all {
-    exclude group: 'org.slf4j', module: 'slf4j-log4j12'
 }
 
 repositories {
