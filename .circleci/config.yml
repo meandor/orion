@@ -18,7 +18,7 @@ jobs:
         - v1-dependencies-{{ checksum "build.gradle" }}
         - v1-dependencies-
 
-    - run: cat /dev/null | ./gradlew assemble
+    - run: cat /dev/null | ./gradlew build
 
     - save_cache:
         paths:
