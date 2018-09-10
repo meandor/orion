@@ -12,15 +12,18 @@ mainClassName = 'com.github.meandor.Orion'
 
 dependencies {
     compile('org.scala-lang:scala-library:2.11.12')
-    compile("org.apache.spark:spark-mllib_$scalaVersion:2.3.1") {
-        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    }
-    compile('ch.qos.logback:logback-classic:1.2.3')
+    compile("org.apache.spark:spark-mllib_$scalaVersion:2.3.1")
     compile("com.typesafe.scala-logging:scala-logging_$scalaVersion:3.9.0")
+    compile('ch.qos.logback:logback-classic:1.2.3')
+    compile('org.slf4j:log4j-over-slf4j:1.7.25')
     compile('com.typesafe:config:1.3.3')
     compile('org.apache.hadoop:hadoop-client:2.8.4')
 
     testCompile("org.scalatest:scalatest_$scalaVersion:3.0.4")
+}
+
+configurations {
+    compile.exclude group: "org.slf4j", module: "slf4j-log4j12"
 }
 
 repositories {

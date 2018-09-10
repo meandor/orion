@@ -9,7 +9,7 @@ object Configs {
     try {
       Option(configFile.getString(property))
     } catch {
-      case e: Exception => None
+      case _: Exception => None
     }
   }
 }
